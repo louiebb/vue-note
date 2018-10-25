@@ -9,7 +9,7 @@
 	<body>
 		<div id="demo">
 			<p>{{name}}</p>
-			<wsscat v-bind:msg="name"></wsscat>
+			<louiebb v-bind:msg="name"></louiebb>
 			<mine></mine>
 		</div>
 	</body>
@@ -58,12 +58,12 @@
 			}
 		})
 
-		var wsscat = Vue.extend({
+		var louiebb = Vue.extend({
 			template: '#tpl',
 			props: ['msg'],
 			data: function() {
 				return {
-					name: 'Wsscat'
+					name: 'Louiebb'
 				}
 			},
 			computed: {
@@ -95,7 +95,7 @@
 			},
 			data: function() {
 				return {
-					name: 'Wsscat'
+					name: 'Louiebb'
 				}
 			}
 		})
@@ -105,13 +105,13 @@
 		});
 
 		// 注册
-		Vue.component('wsscat', wsscat)
+		Vue.component('louiebb', louiebb)
 		Vue.component('mine', me)
 		new Vue({
 			el: '#demo',
 			store: store,
 			data: {
-				name: 'wsscats'
+				name: 'louiebbs'
 			}
 		})
 	</script>

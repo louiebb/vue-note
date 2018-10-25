@@ -42,7 +42,7 @@
         router
     }).$mount('#app')
 ```
-[效果预览](https://github.com/wscats/vue-erp/VueBasic/Router/router.html)
+[效果预览](https://github.com/louiebb/vue-erp/VueBasic/Router/router.html)
 
 ## 路由参数
 ```html
@@ -61,7 +61,7 @@
 
     const routes = [
         {path: '/user/:userid', component: User}
-    ]    
+    ]
 
     const router = new VueRouter({
         routes
@@ -71,7 +71,7 @@
         router
     }).$mount('#app')
 ```
-[效果预览](https://github.com/wscats/vue-erp/VueBasic/Router/params.html)
+[效果预览](https://github.com/louiebb/vue-erp/VueBasic/Router/params.html)
 
 ## 嵌套路由
 ```html
@@ -84,15 +84,15 @@
     </div>
 ```
 ```javascript
-    const Floor1 = { 
+    const Floor1 = {
         template: `
             <div>
                 <h1>一楼</h1>
                 <router-link to="/floor1/floor2">二楼</router-link>
                 <router-view></router-view>
-            </div>` 
+            </div>`
     };
-    const Floor2 = { template: '<div><h1>二楼</h1></div>' };    
+    const Floor2 = { template: '<div><h1>二楼</h1></div>' };
 
     const routes = [
         {
@@ -104,7 +104,7 @@
                 component: Floor2
             }]
         }
-    ]    
+    ]
 
     const router = new VueRouter({
         routes
@@ -114,7 +114,7 @@
         router
     }).$mount('#app')
 ```
-[效果预览](https://github.com/wscats/vue-erp/VueBasic/Router/routerChildren.html)
+[效果预览](https://github.com/louiebb/vue-erp/VueBasic/Router/routerChildren.html)
 
 ## 编程式导航
 用 javascript 跳转路由
@@ -129,7 +129,7 @@
             <!--编程式导航2：router.push()-->
             <input type="button" value="一楼" @click="router.push('/floor1')">
             <!--编程式导航3：router.push({})-->
-            <input type="button" value="一楼" @click="router.push({path: '/floor1'})">            
+            <input type="button" value="一楼" @click="router.push({path: '/floor1'})">
         </p>
         <router-view></router-view>
     </div>
@@ -143,21 +143,21 @@
         <p>
             <router-link to="/floor1">一楼</router-link>
             <!--编程式导航4：router.push({name: '名称'})-->
-            <input type="button" value="一楼" @click="router.push({name: 'floor1'})">             
+            <input type="button" value="一楼" @click="router.push({name: 'floor1'})">
         </p>
         <router-view></router-view>
     </div>
 ```
 ```javascript
-    const Floor1 = { 
+    const Floor1 = {
         template: `
             <div>
                 <h1>一楼</h1>
                 <router-link to="/floor1/floor2">二楼</router-link>
                 <router-view></router-view>
-            </div>` 
+            </div>`
     };
-    const Floor2 = { template: '<div><h1>二楼</h1></div>' };    
+    const Floor2 = { template: '<div><h1>二楼</h1></div>' };
 
     const routes = [
         {
@@ -171,7 +171,7 @@
                 name: 'floor2' //命名
             }]
         }
-    ]    
+    ]
 
     const router = new VueRouter({
         routes

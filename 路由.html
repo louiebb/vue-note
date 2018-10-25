@@ -35,14 +35,14 @@
 			template:'<p>这是第一个组件视图{{name|getLength}}</p><vuemixintest></vuemixintest><vuemixintest2></vuemixintest2>',
 			data:function(){
 				return {
-					name:'wsscat'
+					name:'louiebb'
 				}
 			}
 		})
 		//自定义过滤器，value是从视图中获取的数据，处理完value后要用return把数据输出回来
 		Vue.filter('getLength',function(value){
 			console.log(value);
-			
+
 			return value+"字符串的长度为"+value.length;
 		})
 		//controller directive service
@@ -62,7 +62,7 @@
 			methods:{
 			}
 		})
-		
+
 		//混合，当我们在组件之间复用方法或者模板的时候，我们就可以定义一个mixins，然后在组件的mixins属性接受的数组中注入该mixins就可以使用
 		var myMixin = {
 			template:"<p>第一个混合</p>",
@@ -87,11 +87,11 @@
 				this.hello2();
 			}
 		})
-		
+
 		var vuemixintest2 = Vue.extend({
 			mixins:[myMixin]
 		})
-		
+
 		var vueheader = Vue.extend({
 			//.vue
 			template:"<header>今日笑话</header><style>header{width:100%;background-color:red;color:white;height:50px;line-height:50px;text-align:center}</style>"
@@ -124,7 +124,7 @@
 				'vuelitest':vuelitest
 			},
 			methods:{
-				
+
 			}
 		})
 		var vuelitest = Vue.extend({
@@ -136,15 +136,15 @@
 		Vue.component('vuelitest',vuelitest)
 		Vue.component('vuemixintest',vuemixintest)
 		Vue.component('vuemixintest2',vuemixintest2)
-		
-		var wsscat = Vue.extend({
+
+		var louiebb = Vue.extend({
 			data:function(){
 				return {
-					name: 'wsscat'
+					name: 'louiebb'
 				}
 			}
 		})
-		
+
 		//实例化一个路由对象
 		var router = new VueRouter();
 		//配置路由
@@ -168,7 +168,7 @@
 		router.redirect({
 			'*':'/a'
 		})
-		//将wsscat组件绑定在id为app的标签上，整个路由的作用域就在这个wsscat组件内生效
-		router.start(wsscat,'#app')
+		//将louiebb组件绑定在id为app的标签上，整个路由的作用域就在这个louiebb组件内生效
+		router.start(louiebb,'#app')
 	</script>
 </html>

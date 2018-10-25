@@ -13,7 +13,7 @@
 	<body>
 		<div id="demo">
 			<p>{{name}}</p>
-			<button @click="wsscat()">wsscat</button>
+			<button @click="louiebb()">louiebb</button>
 			<button @click="tacssw()">tacssw</button>
 			<router-view class="view"></router-view>
 		</div>
@@ -21,8 +21,8 @@
 	<script src="./vue.js"></script>
 	<script src="./vue-router.js"></script>
 	<script>
-		var wsscat = Vue.extend({
-			template: '<div>wsscat<div><router-view></router-view>'
+		var louiebb = Vue.extend({
+			template: '<div>louiebb<div><router-view></router-view>'
 		})
 		var tacssw = Vue.extend({
 			template: '<div>tacssw<div>'
@@ -30,12 +30,12 @@
 		var app = Vue.extend({
 				data: function() {
 					return {
-						name: 'wsscat'
+						name: 'louiebb'
 					}
 				},
 				methods:{
-					wsscat:function(){
-						window.location.href = '#!/wsscat/a/4';
+					louiebb:function(){
+						window.location.href = '#!/louiebb/a/4';
 					},
 					tacssw:function(){
 						window.location.href = '#!/tacssw';
@@ -45,8 +45,8 @@
 			//定义路由对象
 		var router = new VueRouter();
 		router.map({
-			'/wsscat': {
-				component: wsscat,
+			'/louiebb': {
+				component: louiebb,
 				//路由嵌套
 				subRoutes: {
 					'/a/:id': {
@@ -54,7 +54,7 @@
 							template: '<button @click="toParams()">点击按钮传递数据到子路由b</button><div>a</div>',
 							methods: {
 								toParams: function() {
-									window.location.href = '#!/wsscat/b' + '/1'
+									window.location.href = '#!/louiebb/b' + '/1'
 								}
 							},
 							route: {
@@ -69,7 +69,7 @@
 							template: '<button @click="toParams()">点击按钮传递数据到子路由a</button><div>b</div>',
 							methods: {
 								toParams: function() {
-									window.location.href = '#!/wsscat/a' + '/2'
+									window.location.href = '#!/louiebb/a' + '/2'
 								}
 							},
 							route: {
@@ -86,7 +86,7 @@
 			}
 		})
 		router.redirect({
-			'*': '/wsscat/a/3'
+			'*': '/louiebb/a/3'
 		})
 		router.start(app, '#demo')
 	</script>

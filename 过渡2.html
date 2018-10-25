@@ -39,20 +39,20 @@
 			transform: rotate(360deg);
 			padding: 0 10px;
 		}
-		
+
 		.rotate-leave{
 			height: 0;
 			opacity:0;
 			transform: rotate(360deg);
 			padding: 0 10px;
 		}
-		
+
 		.staggered-transition{
 			transition: all .6s ease;
 			height: 20px;
 			opacity: 1;
 		}
-		
+
 		.staggered-enter,
 		.staggered-leave{
 			height: 0px;
@@ -65,7 +65,7 @@
 				v-if
 			</p>
 			<button @click="fi=!fi">Ok</button>
-			<div v-if="fi" transition="expend">hello wsscat</div>
+			<div v-if="fi" transition="expend">hello louiebb</div>
 			<p style="color: red;">
 				v-show
 			</p>
@@ -74,8 +74,8 @@
 				<option value="rotate">rotate</option>
 			</select>
 			<button @click="show=!show">Ok</button>
-			<div v-show="show" :transition="tran">hello wsscat</div>
-			
+			<div v-show="show" :transition="tran">hello louiebb</div>
+
 			<p style="color: red;">
 				v-for
 			</p>
@@ -95,7 +95,7 @@
 		var demo = new Vue({
 			el:'#demo',
 			data:{
-				name:'wsscat',
+				name:'louiebb',
 				fi:true,
 				show:true,
 				tran:'rotate',
@@ -113,7 +113,7 @@
 				params:''
 			},
 			methods:{
-				
+
 			}
 		})
 	</script>

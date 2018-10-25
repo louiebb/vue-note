@@ -7,7 +7,7 @@
 	</head>
 
 	<body>
-		<div id="wscats">
+		<div id="louiebb">
 			<p>通过this.$refs来获取节点</p>
 			<p>{{eman}}</p>
 			<cp ref="cp"></cp>
@@ -32,14 +32,14 @@
 			`
 		}
 		new Vue({
-			el: "#wscats",
+			el: "#louiebb",
 			data: {
 				eman: "",
 				a:1
 			},
 			mounted() {
 				console.log(this.$refs.cp.name)
-				
+
 				//要在$nextTick后面获取this.$refs的节点
 				console.log('start');
 				this.$nextTick(function() {

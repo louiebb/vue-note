@@ -10,7 +10,7 @@
 		<div v-demo:hello.a.b.c="msg"></div>
 		<button v-cclick:click="test()">Ok</button>
 		<input v-model="name" />
-		<p v-wsscat="name" a="1" b="arr">{{name}}</p>
+		<p v-louiebb="name" a="1" b="arr">{{name}}</p>
 	</body>
 	<script src="./vue.js"></script>
 	<script>
@@ -51,7 +51,7 @@
 			el: '#demo',
 			data: {
 				msg: 'hello!',
-				name: 'wsscat',
+				name: 'louiebb',
 				arr:['a','b','c'],
 			},
 			methods: {
@@ -60,10 +60,10 @@
 				}
 			},
 			directives: {
-				wsscat: {
+				louiebb: {
 					params: ['a','b'],
 					bind: function() {
-						console.log("wsscat")
+						console.log("louiebb")
 					},
 					update: function(newValue, oldValue) {
 						console.log(this.params)

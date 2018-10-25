@@ -16,6 +16,6 @@
     <!--修饰符可以串联.click.prevent.once-->
     <a href="https://github.com/dk-lan" target="_blank" @click.prevent.once="prevent">dk's github</a>
 ```
-[事件修饰符效果预览](https://github.com/wscats/vue-erp/VueBasic/Modifiers/eventModifiers.html)
+[事件修饰符效果预览](https://github.com/louiebb/vue-erp/VueBasic/Modifiers/eventModifiers.html)
 
 # 表单修饰符

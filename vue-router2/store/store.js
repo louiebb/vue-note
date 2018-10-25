@@ -2,7 +2,7 @@ var store = new Vuex.Store({
 	//存储数据的地方
 	state: {
 		name: "新闻",
-		author: "wscats",
+		author: "louiebb",
 		searchName: ""
 	},
 	//修改值的方法
